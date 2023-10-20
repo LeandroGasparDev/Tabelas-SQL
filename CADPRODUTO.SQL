@@ -36,7 +36,6 @@ CREATE UNIQUE INDEX CADPRODUTO_IDX1 ON CADPRODUTO (DESCRICAO);
 CREATE UNIQUE INDEX CADPRODUTO_IDX2 ON CADPRODUTO (CODFISCAL);
 CREATE INDEX CADPRODUTO_TIPO_IDX ON CADPRODUTO (TIPO);
 
-
 /******************************************************************************/
 /***                                Triggers                                ***/
 /******************************************************************************/
