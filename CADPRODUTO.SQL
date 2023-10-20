@@ -41,20 +41,6 @@ CREATE INDEX CADPRODUTO_TIPO_IDX ON CADPRODUTO (TIPO);
 /***                                Triggers                                ***/
 /******************************************************************************/
 
-
-/* Trigger: "000_CADPRODUTO_MARKUP_10000" */
-CREATE OR ALTER TRIGGER "000_CADPRODUTO_MARKUP_10000" FOR CADPRODUTO
-ACTIVE BEFORE INSERT OR UPDATE POSITION 0
-AS 
- begin 
-   if (NEW.MARKUP > 100000) then 
-   begin 
-     NEW.MARKUP = 10000; 
-     NEW.LUCRO = NULL; 
-     NEW.VALORUNIT = NEW.CUSTO + (NEW.CUSTO * 100000/100); 
-   end 
- end;
-
 /* Trigger: TG_CADPRODUTO */
 CREATE OR ALTER TRIGGER TG_CADPRODUTO FOR CADPRODUTO
 ACTIVE BEFORE INSERT OR UPDATE POSITION 0
