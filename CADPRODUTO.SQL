@@ -1,5 +1,6 @@
 CREATE GENERATOR GEN_CADPRODUTO;
 
+
 CREATE TABLE CADPRODUTO (
     ID                      INTEGER,
     CODFISCAL               VARCHAR(60),
